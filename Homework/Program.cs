@@ -4,7 +4,7 @@ using System;
 using System.Diagnostics;
 
 float combinedNumber = 0;
-float MaxDigits = 4;
+float MaxDigits = 6;
 
 for (float i = 1; i < MaxDigits + 1; i++) // we will receive four numbers from user and combine them to one
 {
