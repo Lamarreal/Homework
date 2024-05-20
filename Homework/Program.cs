@@ -1,5 +1,8 @@
 ﻿// First 
 
+using System;
+using System.Diagnostics;
+
 float combinedNumber = 0;
 float MaxDigits = 4;
 
@@ -16,3 +19,26 @@ for (float i = 1; i < MaxDigits + 1; i++) // we will receive four numbers from u
     }
 }
 Console.WriteLine("Your number is :" +  combinedNumber.ToString());
+
+Console.WriteLine("Reverse? : Y|N");
+
+string? Input2 = Console.ReadLine();
+
+
+if (Input2 != null)
+{
+    if (Input2.ToUpper() == "Y")
+    {
+        int num = Convert.ToInt32(combinedNumber);
+        int result = 0;
+
+        while (num != 0)
+        { 
+            int a = num % 10;
+            result = result * 10 + a;
+            num = num / 10;
+        }
+
+        Console.WriteLine("Your number is : " + result.ToString());
+    }
+}
